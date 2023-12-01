@@ -142,7 +142,7 @@ public sealed class PartTwoSolution01 : ISolution<string[]>
 				}
 
 				index = wordIndex;
-				return indexOfFoundWord + 1;
+				return indexOfFoundWord + 1; // adding 1 to turn the index into the value of the word at that index
 			}
 
 			index = charIndex;
