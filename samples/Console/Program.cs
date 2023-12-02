@@ -31,7 +31,7 @@ RunSolution<Day01.PartTwoSolution032, string[]>(
 	File.ReadAllLines(GetPathForInput(1)),
 	54518);
 
-RunSolution<Day02.PartOneSolution01, string[]>(
+RunSolution<Day02.PartOneSolution02, string[]>(
 	"""
 	Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 	Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
@@ -52,12 +52,13 @@ static void RunSolution<T, TInput>(TInput exampleInput, long expectedExampleResu
 		var exampleResult = exampleSolution.Solve(exampleInput);
 		if (exampleResult != expectedExampleResult)
 		{
-			LogError($"❌ Failed with: {exampleResult}, expected: {expectedExampleResult}.");
+			LogError($"❌ [{typeof(T).FullName}] Failed with: {exampleResult}, expected: {expectedExampleResult}.");
+			Pad();
 			return;
 		}
 	}
 
-	LogSuccess("✔️ Passed example!");
+	LogSuccess($"✔️ [{typeof(T).FullName}] Passed example!");
 
 	{
 		var solution = new T();
@@ -68,16 +69,20 @@ static void RunSolution<T, TInput>(TInput exampleInput, long expectedExampleResu
 		{
 			if (result == knownResult.Value)
 			{
-				LogSuccess($"✔️ Passed real test! Elapsed: {elapsed.TotalMilliseconds}ms");
+				LogSuccess($"✔️ [{typeof(T).FullName}] Passed real test! Elapsed: {elapsed.TotalMilliseconds}ms.");
+				Pad();
 				return;
 			}
 
-			LogError($"❌ Failed with: {result}, expected: {knownResult.Value}.");
+			LogError($"❌ [{typeof(T).FullName}] Failed with: {result}, expected: {knownResult.Value}, time: {elapsed.TotalMilliseconds}ms.");
+			Pad();
 			return;
 		}
 
-		Log($"❓ Result: {result}, time: {elapsed.TotalMilliseconds}ms");
+		Log($"❓ [{typeof(T).FullName}] Result: {result}, time: {elapsed.TotalMilliseconds}ms.");
 	}
+
+	Pad();
 }
 
 static string GetPathForInput(int day) => 
@@ -104,3 +109,5 @@ static void LogSuccess(string message)
 }
 
 static void Log(string message) => Console.WriteLine(message);
+
+static void Pad() => Console.WriteLine();
