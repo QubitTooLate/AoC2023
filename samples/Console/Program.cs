@@ -16,7 +16,7 @@ RunSolution<Day01.PartOneSolution03, string[]>(
 	File.ReadAllLines(GetPathForInput(1)),
 	54331);
 
-RunSolution<Day01.PartTwoSolution03, string[]>(
+RunSolution<Day01.PartTwoSolution032, string[]>(
 	"""
 	two1nine
 	eightwothree
