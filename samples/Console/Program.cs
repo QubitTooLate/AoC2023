@@ -5,7 +5,7 @@ using System.Text;
 
 PrepareConsole();
 
-RunSolution<Day01.PartOneSolution02, string[]>(
+RunSolution<Day01.PartOneSolution03, string[]>(
 	"""
 	1abc2
 	pqr3stu8vwx
@@ -16,7 +16,7 @@ RunSolution<Day01.PartOneSolution02, string[]>(
 	File.ReadAllLines(GetPathForInput(1)),
 	54331);
 
-RunSolution<Day01.PartTwoSolution02, string[]>(
+RunSolution<Day01.PartTwoSolution03, string[]>(
 	"""
 	two1nine
 	eightwothree
