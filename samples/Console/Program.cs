@@ -43,7 +43,7 @@ RunSolution<Day02.PartOneSolution02, string[]>(
 	File.ReadAllLines(GetPathForInput(2)),
 	2406);
 
-RunSolution<Day02.PartTwoSolution01, string[]>(
+RunSolution<Day02.PartTwoSolution02, string[]>(
 	"""
 	Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 	Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
