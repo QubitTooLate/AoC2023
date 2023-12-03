@@ -56,7 +56,7 @@ RunSolution<Day02.PartTwoSolution02>(
 	File.ReadAllLines(GetPathForInput(2)),
 	78375);
 
-RunSolution<Day03.PartOneSolution01>(
+RunSolution<Day03.PartOneSolution02>(
 	"""
 	467..114..
 	...*......
@@ -73,7 +73,7 @@ RunSolution<Day03.PartOneSolution01>(
 	File.ReadAllLines(GetPathForInput(3)),
 	530849);
 
-RunSolution<Day03.PartTwoSolution01>(
+RunSolution<Day03.PartTwoSolution02>(
 	"""
 	467..114..
 	...*......
@@ -137,6 +137,7 @@ static string GetPathForInput(int day) =>
 
 static void PrepareConsole()
 {
+	Console.Clear();
 	Console.OutputEncoding = Encoding.UTF8;
 	Console.ForegroundColor = ConsoleColor.White;
 }
