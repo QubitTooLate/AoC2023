@@ -1,6 +1,7 @@
 ﻿using Qtl.AoC2023;
 using Day01 = Qtl.AoC2023.Day01;
 using Day02 = Qtl.AoC2023.Day02;
+using Day03 = Qtl.AoC2023.Day03;
 using System.Diagnostics;
 using System.Text;
 
@@ -17,7 +18,7 @@ RunSolution<Day01.PartOneSolution03, string[]>(
 	File.ReadAllLines(GetPathForInput(1)),
 	54331);
 
-RunSolution<Day01.PartTwoSolution032, string[]>(
+RunSolution<Day01.PartTwoSolution04, string[]>(
 	"""
 	two1nine
 	eightwothree
@@ -54,6 +55,23 @@ RunSolution<Day02.PartTwoSolution02, string[]>(
 	2286,
 	File.ReadAllLines(GetPathForInput(2)),
 	78375);
+
+RunSolution<Day03.PartOneSolution01, string[]>(
+	"""
+	467..114..
+	...*......
+	..35..633.
+	......#...
+	617*......
+	.....+.58.
+	..592.....
+	......755.
+	...$.*....
+	.664.598..
+	""".Split('\n'),
+	4361,
+	File.ReadAllLines(GetPathForInput(3)),
+	530849);
 
 return;
 
