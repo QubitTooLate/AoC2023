@@ -1,7 +1,7 @@
 ﻿
 namespace Qtl.AoC2023.Day01;
 
-public sealed class PartTwoSolution03 : ISolution<string[]>
+public sealed class PartTwoSolution03 : ISolution
 {
 	// "Single line of code", isn't that funny?
 	public long Solve(string[] input) =>

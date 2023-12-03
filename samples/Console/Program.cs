@@ -7,7 +7,7 @@ using System.Text;
 
 PrepareConsole();
 
-RunSolution<Day01.PartOneSolution03, string[]>(
+RunSolution<Day01.PartOneSolution03>(
 	"""
 	1abc2
 	pqr3stu8vwx
@@ -18,7 +18,7 @@ RunSolution<Day01.PartOneSolution03, string[]>(
 	File.ReadAllLines(GetPathForInput(1)),
 	54331);
 
-RunSolution<Day01.PartTwoSolution04, string[]>(
+RunSolution<Day01.PartTwoSolution04>(
 	"""
 	two1nine
 	eightwothree
@@ -32,7 +32,7 @@ RunSolution<Day01.PartTwoSolution04, string[]>(
 	File.ReadAllLines(GetPathForInput(1)),
 	54518);
 
-RunSolution<Day02.PartOneSolution02, string[]>(
+RunSolution<Day02.PartOneSolution02>(
 	"""
 	Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 	Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
@@ -44,7 +44,7 @@ RunSolution<Day02.PartOneSolution02, string[]>(
 	File.ReadAllLines(GetPathForInput(2)),
 	2406);
 
-RunSolution<Day02.PartTwoSolution02, string[]>(
+RunSolution<Day02.PartTwoSolution02>(
 	"""
 	Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 	Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
@@ -56,7 +56,7 @@ RunSolution<Day02.PartTwoSolution02, string[]>(
 	File.ReadAllLines(GetPathForInput(2)),
 	78375);
 
-RunSolution<Day03.PartOneSolution01, string[]>(
+RunSolution<Day03.PartOneSolution01>(
 	"""
 	467..114..
 	...*......
@@ -75,7 +75,7 @@ RunSolution<Day03.PartOneSolution01, string[]>(
 
 return;
 
-static void RunSolution<T, TInput>(TInput exampleInput, long expectedExampleResult, TInput input, long? knownResult = null) where T : ISolution<TInput>, new()
+static void RunSolution<T>(string[] exampleInput, long expectedExampleResult, string[] input, long? knownResult = null) where T : ISolution, new()
 {
 	{
 		var exampleSolution = new T();

@@ -1,7 +1,7 @@
 ﻿
 namespace Qtl.AoC2023.Day03;
 
-public sealed class PartOneSolution01 : ISolution<string[]>
+public sealed class PartOneSolution01 : ISolution
 {
 	private static readonly string _symbols = "*+/-+$#@&%=";
 
@@ -20,10 +20,10 @@ public sealed class PartOneSolution01 : ISolution<string[]>
 
 			// Find entire number containing digit.
 			var lx = x - 1;
-			for (; lx > 0 && char.IsAsciiDigit(row[lx]); lx--) { }
+			for (; lx > 0 && char.IsAsciiDigit(row[lx]); lx--);
 
-			var rx = x;
-			for (; rx < size.width && char.IsAsciiDigit(row[rx]); rx++) { }
+			var rx = x + 1;
+			for (; rx < size.width && char.IsAsciiDigit(row[rx]); rx++);
 
 			var digitsSpan = input[y].AsSpan(lx, rx - lx);
 			if (!char.IsAsciiDigit(digitsSpan[0]))

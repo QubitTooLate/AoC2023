@@ -1,6 +1,6 @@
 ﻿namespace Qtl.AoC2023.Day01;
 
-public sealed class PartOneSolution02 : ISolution<string[]>
+public sealed class PartOneSolution02 : ISolution
 {
 	public long Solve(string[] input) => input.Select(item => (GetFirstNumberFound(item) * 10) + GetLastNumberFound(item)).Sum();
 

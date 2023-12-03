@@ -2,7 +2,7 @@
 
 namespace Qtl.AoC2023.Day02;
 
-public sealed partial class PartTwoSolution01 : ISolution<string[]>
+public sealed partial class PartTwoSolution01 : ISolution
 {
 	public long Solve(string[] input) =>
 		input

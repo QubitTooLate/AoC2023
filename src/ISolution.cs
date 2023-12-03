@@ -2,7 +2,7 @@
 
 namespace Qtl.AoC2023;
 
-public interface ISolution<TInput>
+public interface ISolution
 {
-	long Solve(TInput input);
+	long Solve(string[] input);
 }
