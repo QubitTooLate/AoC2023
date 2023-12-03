@@ -73,6 +73,23 @@ RunSolution<Day03.PartOneSolution01>(
 	File.ReadAllLines(GetPathForInput(3)),
 	530849);
 
+RunSolution<Day03.PartTwoSolution01>(
+	"""
+	467..114..
+	...*......
+	..35..633.
+	......#...
+	617*......
+	.....+.58.
+	..592.....
+	......755.
+	...$.*....
+	.664.598..
+	""".Split('\n'),
+	467835,
+	File.ReadAllLines(GetPathForInput(3)),
+	84900879);
+
 return;
 
 static void RunSolution<T>(string[] exampleInput, long expectedExampleResult, string[] input, long? knownResult = null) where T : ISolution, new()
