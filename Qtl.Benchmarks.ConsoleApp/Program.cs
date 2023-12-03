@@ -3,6 +3,7 @@ using BenchmarkDotNet.Running;
 
 using Day01 = Qtl.AoC2023.Day01;
 using Day02 = Qtl.AoC2023.Day02;
+using Day03 = Qtl.AoC2023.Day03;
 
 BenchmarkRunner.Run<Benchmarks>();
 
@@ -67,5 +68,21 @@ public class Benchmarks
 		_dayTwoPartOneSolution02 = new();
 		_dayTwoPartTwoSolution01 = new();
 		_dayTwoPartTwoSolution02 = new();
+	}
+
+	private string[]? _dayThreeInput;
+
+	private Day03.PartOneSolution01? _dayThreePartOneSolution01;
+	private Day03.PartTwoSolution01? _dayThreePartTwoSolution02;
+
+	[Benchmark] private long BenchDay03PartOneSolution01() => _dayThreePartOneSolution01!.Solve(_dayThreeInput!);
+
+	[Benchmark] private long BenchDay03PartTwoSolution02() => _dayThreePartTwoSolution02!.Solve(_dayThreeInput!);
+
+	public void DayThreeSource()
+	{
+		_dayThreeInput = File.ReadAllLines(@"D:\AoC2023\src\Day02\Input\Input.txt");
+		_dayThreePartOneSolution01 = new();
+		_dayThreePartTwoSolution02 = new();
 	}
 }
